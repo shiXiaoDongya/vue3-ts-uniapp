@@ -1,72 +1,74 @@
 {
-    "name" : "",
-    "appid" : "",
-    "description" : "",
-    "versionName" : "1.0.0",
-    "versionCode" : "100",
-    "transformPx" : false,
-    /* 5+App特有相关 */
-    "app-plus" : {
-        "usingComponents" : true,
-        "nvueStyleCompiler" : "uni-app",
-        "compilerVersion" : 3,
-        "splashscreen" : {
-            "alwaysShowBeforeRender" : true,
-            "waiting" : true,
-            "autoclose" : true,
-            "delay" : 0
+    "name": "test小程序", // 应用名
+    "appid": "", // 移动应用的AppID
+    "description": "", // 说明
+    "versionName": "1.0.0", // 版本名
+    "versionCode": "1", // 版本号
+    /* 5+App配置 */
+    "app-plus": {
+      "usingComponents": true, // 是否组件化
+      "nvueStyleCompiler": "uni-app", // nvue样式编译器
+      "compilerVersion": 3, // 编译器版本
+      "splashscreen": { // 启动画面配置
+        "alwaysShowBeforeRender": true,
+        "waiting": true,
+        "autoclose": true,
+      },
+      /* 模块配置 */
+      "modules": {},
+      /* 应用发布信息 */
+      "distribute": {
+        /* android打包配置 */
+        "android": {
+          "permissions": [ // 权限配置
+            "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+            "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+            "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+            "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+            "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+            "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+            "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+            "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+            "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+            "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+            "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+            "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+            "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+            "<uses-feature android:name=\"android.hardware.camera\"/>",
+            "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+          ]
         },
-        /* 模块配置 */
-        "modules" : {},
-        /* 应用发布信息 */
-        "distribute" : {
-            /* android打包配置 */
-            "android" : {
-                "permissions" : [
-                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
-                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
-                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
-                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
-                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
-                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
-                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
-                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
-                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
-                    "<uses-feature android:name=\"android.hardware.camera\"/>",
-                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
-                ]
-            },
-            /* ios打包配置 */
-            "ios" : {},
-            /* SDK配置 */
-            "sdkConfigs" : {}
-        }
+        /* ios打包配置 */
+        "ios": {},
+        /* SDK配置 */
+        "sdkConfigs": {}
+      }
     },
-    /* 快应用特有相关 */
-    "quickapp" : {},
-    /* 小程序特有相关 */
-    "mp-weixin" : {
-        "appid" : "",
-        "setting" : {
-            "urlCheck" : false
-        },
-        "usingComponents" : true
+    /* 快应用 */
+    "quickapp": {},
+    /* 微信小程序 */
+    "mp-weixin": {
+      "appid": "", // 微信公众平台的AppId
+      "setting": {
+        "urlCheck": false // 不进行路径检查配置
+      },
+      "usingComponents": true // 使用组件
     },
-    "mp-alipay" : {
-        "usingComponents" : true
+    /* 支付宝小程序 */
+    "mp-alipay": {
+      "usingComponents": true
     },
-    "mp-baidu" : {
-        "usingComponents" : true
+    /* 百度小程序 */
+    "mp-baidu": {
+      "usingComponents": true
     },
-    "mp-toutiao" : {
-        "usingComponents" : true
+    /* 字节跳动小程序 */
+    "mp-toutiao": {
+      "usingComponents": true
     },
-    "uniStatistics": {  
-        "enable": false
+    "uniStatistics": {
+      "enable": false // 不授权uni数据统计
     },
-    "vueVersion" : "3"
-}
+    "vueVersion": "3" // 启动vue3版本
+  }
+  
