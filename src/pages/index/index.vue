@@ -3,13 +3,16 @@
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
       <text class="title">{{ title }}</text>
+      <uni-badge :text="'100'" type="primary" :absolute="'rightBottom'" :size="'small'">
+        <button>右下</button>
+      </uni-badge>
     </view>
   </view>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-const title = ref('Hello')
+import { ref } from "vue";
+const title = ref("Hello");
 </script>
 
 <style>

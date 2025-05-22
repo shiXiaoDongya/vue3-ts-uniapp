@@ -1,29 +1,23 @@
-// tsconfig.json
 {
+  "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
-    "jsx": "preserve",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
+    "allowJs": true,
     "sourceMap": true,
-    "skipLibCheck": true,
-    "importHelpers": true,
-    "allowSyntheticDefaultImports": true,
-    "useDefineForClassFields": true,
-    "resolveJsonModule": true,
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "lib": ["esnext", "dom"],
     "types": [
-      "@dcloudio/types"
+      "@dcloudio/types",
+      "miniprogram-api-typings",
+      // 为 uni-app 组件提供 TypeScript 类型，需要安装 @uni-helper/uni-types
+      "@uni-helper/uni-types"
     ]
   },
-  "exclude": [
-    "node_modules",
-    "unpackage",
-    "src/**/*.nvue"
-  ]
+  "vueCompilerOptions": {
+    // 调整 Volar（Vue 语言服务工具）解析行为，用于为 uni-app 组件提供 TypeScript 类型
+    "plugins": ["@uni-helper/uni-types/volar-plugin"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

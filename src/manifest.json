@@ -48,11 +48,14 @@
     "quickapp": {},
     /* 微信小程序 */
     "mp-weixin": {
-      "appid": "", // 微信公众平台的AppId
+      "appid": "",
       "setting": {
-        "urlCheck": false // 不进行路径检查配置
+        "minified": true,
+        "urlCheck": true
       },
-      "usingComponents": true // 使用组件
+      // 启用组件按需注入
+      "lazyCodeLoading": "requiredComponents",
+      "usingComponents": true
     },
     /* 支付宝小程序 */
     "mp-alipay": {
